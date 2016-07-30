@@ -1,0 +1,11 @@
+verse_of_day_homepage:
+    path:     /
+    defaults: { _controller: VerseOfDayBundle:Default:index }
+
+changeVersion:
+    path: /changeVersion
+    defaults: { _controller: VerseOfDayBundle:Default:changeVersion }
+
+changePOST:
+    path: /changePOST
+    defaults: { _controller: VerseOfDayBundle:Default:changePOST }

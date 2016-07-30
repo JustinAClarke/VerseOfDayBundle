@@ -1,0 +1,6 @@
+{#{{app.session['version']}}#}
+<div id=VerseOfToday>
+<div class=verse>{{ verse }}</div>
+<div class=reference>{{ reference }} {{version}}</div>
+<div class=biblegateway>Powered by <a href="https://www.biblegateway.com/">BibleGateway.com</a> <a href="{{ path('changeVersion') }}">Change Version</a></div>
+</div>

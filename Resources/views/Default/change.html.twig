@@ -1,0 +1,351 @@
+{#The file to change the version for the bible#}
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<form action="{{ path('changePOST') }}" method="post">
+
+<p>
+Use text from<br>
+<select name="version"> 
+<option value="AMU" class="lang">&mdash;Amuzgo de Guerrero (AMU)&mdash;</option>
+<option value="AMU">Amuzgo de Guerrero (AMU)</option>
+<option value="AMU" class="spacer">&nbsp;</option>
+<option value="ERV-AR" class="lang">&mdash;العربية (AR)&mdash;</option>
+<option value="ERV-AR">Arabic Bible: Easy-to-Read Version (ERV-AR)</option>
+<option value="NAV">Ketab El Hayat (NAV)</option>
+<option value="NAV" class="spacer">&nbsp;</option>
+<option value="ERV-AWA" class="lang">&mdash;अवधी (AWA)&mdash;</option>
+<option value="ERV-AWA">Awadhi Bible: Easy-to-Read Version (ERV-AWA)</option>
+<option value="ERV-AWA" class="spacer">&nbsp;</option>
+<option value="BG1940" class="lang">&mdash;Български (BG)&mdash;</option>
+<option value="BG1940">1940 Bulgarian Bible (BG1940)</option>
+<option value="BULG">Bulgarian Bible (BULG)</option>
+<option value="ERV-BG">Bulgarian New Testament: Easy-to-Read Version (ERV-BG)</option>
+<option value="BPB">Библия, ревизирано издание (BPB)</option>
+<option value="BPB" class="spacer">&nbsp;</option>
+<option value="CCO" class="lang">&mdash;Chinanteco de Comaltepec (CCO)&mdash;</option>
+<option value="CCO">Chinanteco de Comaltepec (CCO)</option>
+<option value="CCO" class="spacer">&nbsp;</option>
+<option value="APSD-CEB" class="lang">&mdash;Cebuano (CEB)&mdash;</option>
+<option value="APSD-CEB">Ang Pulong Sa Dios (APSD-CEB)</option>
+<option value="APSD-CEB" class="spacer">&nbsp;</option>
+<option value="CHR" class="lang">&mdash;ᏣᎳᎩ ᎦᏬᏂᎯᏍ (CHR)&mdash;</option>
+<option value="CHR">Cherokee New Testament (CHR)</option>
+<option value="CHR" class="spacer">&nbsp;</option>
+<option value="CKW" class="lang">&mdash;Cakchiquel Occidental (CKW)&mdash;</option>
+<option value="CKW">Cakchiquel Occidental (CKW)</option>
+<option value="CKW" class="spacer">&nbsp;</option>
+<option value="B21" class="lang">&mdash;Čeština (CS)&mdash;</option>
+<option value="B21">Bible 21 (B21)</option>
+<option value="SNC">Slovo na cestu (SNC)</option>
+<option value="SNC" class="spacer">&nbsp;</option>
+<option value="BWM" class="lang">&mdash;Cymraeg (CY)&mdash;</option>
+<option value="BWM">Beibl William Morgan (BWM)</option>
+<option value="BWM" class="spacer">&nbsp;</option>
+<option value="BPH" class="lang">&mdash;Dansk (DA)&mdash;</option>
+<option value="BPH">Bibelen på hverdagsdansk (BPH)</option>
+<option value="DN1933">Dette er Biblen på dansk (DN1933)</option>
+<option value="DN1933" class="spacer">&nbsp;</option>
+<option value="HOF" class="lang">&mdash;Deutsch (DE)&mdash;</option>
+<option value="HOF">Hoffnung für Alle (HOF)</option>
+<option value="LUTH1545">Luther Bibel 1545 (LUTH1545)</option>
+<option value="NGU-DE">Neue Genfer Übersetzung (NGU-DE)</option>
+<option value="SCH1951">Schlachter 1951 (SCH1951)</option>
+<option value="SCH2000">Schlachter 2000 (SCH2000)</option>
+<option value="SCH2000" class="spacer">&nbsp;</option>
+<option value="KJ21" class="lang">&mdash;English (EN)&mdash;</option>
+<option value="KJ21">21st Century King James Version (KJ21)</option>
+<option value="ASV">American Standard Version (ASV)</option>
+<option value="AMP">Amplified Bible (AMP)</option>
+<option value="AMPC">Amplified Bible, Classic Edition (AMPC)</option>
+<option value="BRG">BRG Bible (BRG)</option>
+<option value="CEB">Common English Bible (CEB)</option>
+<option value="CJB">Complete Jewish Bible (CJB)</option>
+<option value="CEV">Contemporary English Version (CEV)</option>
+<option value="DARBY">Darby Translation (DARBY)</option>
+<option value="DLNT">Disciples’ Literal New Testament (DLNT)</option>
+<option value="DRA">Douay-Rheims 1899 American Edition (DRA)</option>
+<option value="ERV">Easy-to-Read Version (ERV)</option>
+<option value="ESV">English Standard Version (ESV)</option>
+<option value="ESVUK">English Standard Version Anglicised (ESVUK)</option>
+<option value="EXB">Expanded Bible (EXB)</option>
+<option value="GNV">1599 Geneva Bible (GNV)</option>
+<option value="GW">GOD’S WORD Translation (GW)</option>
+<option value="GNT">Good News Translation (GNT)</option>
+<option value="HCSB">Holman Christian Standard Bible (HCSB)</option>
+<option value="ICB">International Children’s Bible (ICB)</option>
+<option value="ISV">International Standard Version (ISV)</option>
+<option value="PHILLIPS">J.B. Phillips New Testament (PHILLIPS)</option>
+<option value="JUB">Jubilee Bible 2000 (JUB)</option>
+<option value="KJV">King James Version (KJV)</option>
+<option value="AKJV">Authorized (King James) Version (AKJV)</option>
+<option value="LEB">Lexham English Bible (LEB)</option>
+<option value="TLB">Living Bible (TLB)</option>
+<option value="MSG">The Message (MSG)</option>
+<option value="MEV">Modern English Version (MEV)</option>
+<option value="MOUNCE">Mounce Reverse-Interlinear New Testament (MOUNCE)</option>
+<option value="NOG">Names of God Bible (NOG)</option>
+<option value="NABRE">New American Bible (Revised Edition) (NABRE)</option>
+<option value="NASB">New American Standard Bible (NASB)</option>
+<option value="NCV">New Century Version (NCV)</option>
+<option value="NET">New English Translation (NET Bible)</option>
+<option value="NIRV">New International Reader's Version (NIRV)</option>
+<option selected="selected" value="NIV">New International Version (NIV)</option>
+<option value="NIVUK">New International Version - UK (NIVUK)</option>
+<option value="NKJV">New King James Version (NKJV)</option>
+<option value="NLV">New Life Version (NLV)</option>
+<option value="NLT">New Living Translation (NLT)</option>
+<option value="NRSV">New Revised Standard Version (NRSV)</option>
+<option value="NRSVA">New Revised Standard Version, Anglicised (NRSVA)</option>
+<option value="NRSVACE">New Revised Standard Version, Anglicised Catholic Edition (NRSVACE)</option>
+<option value="NRSVCE">New Revised Standard Version Catholic Edition (NRSVCE)</option>
+<option value="OJB">Orthodox Jewish Bible (OJB)</option>
+<option value="RSV">Revised Standard Version (RSV)</option>
+<option value="RSVCE">Revised Standard Version Catholic Edition (RSVCE)</option>
+<option value="TLV">Tree of Life Version (TLV)</option>
+<option value="VOICE">The Voice (VOICE)</option>
+<option value="WEB">World English Bible (WEB)</option>
+<option value="WE">Worldwide English (New Testament) (WE)</option>
+<option value="WYC">Wycliffe Bible (WYC)</option>
+<option value="YLT">Young's Literal Translation (YLT)</option>
+<option value="YLT" class="spacer">&nbsp;</option>
+<option value="LBLA" class="lang">&mdash;Español (ES)&mdash;</option>
+<option value="LBLA">La Biblia de las Américas (LBLA)</option>
+<option value="DHH">Dios Habla Hoy (DHH)</option>
+<option value="JBS">Jubilee Bible 2000 (Spanish) (JBS)</option>
+<option value="NBD">Nueva Biblia al Día (NBD)</option>
+<option value="NBLH">Nueva Biblia Latinoamericana de Hoy (NBLH)</option>
+<option value="NTV">Nueva Traducción Viviente (NTV)</option>
+<option value="NVI">Nueva Versión Internacional (NVI)</option>
+<option value="CST">Nueva Versión Internacional (Castilian) (CST)</option>
+<option value="PDT">Palabra de Dios para Todos (PDT)</option>
+<option value="BLP">La Palabra (España) (BLP)</option>
+<option value="BLPH">La Palabra (Hispanoamérica) (BLPH)</option>
+<option value="RVA-2015">Reina Valera Actualizada (RVA-2015)</option>
+<option value="RVC">Reina Valera Contemporánea (RVC)</option>
+<option value="RVR1960">Reina-Valera 1960 (RVR1960)</option>
+<option value="RVR1977">Reina Valera 1977 (RVR1977)</option>
+<option value="RVR1995">Reina-Valera 1995 (RVR1995)</option>
+<option value="RVA">Reina-Valera Antigua (RVA)</option>
+<option value="TLA">Traducción en lenguaje actual (TLA)</option>
+<option value="TLA" class="spacer">&nbsp;</option>
+<option value="R1933" class="lang">&mdash;Suomi (FI)&mdash;</option>
+<option value="R1933">Raamattu 1933/38 (R1933)</option>
+<option value="R1933" class="spacer">&nbsp;</option>
+<option value="BDS" class="lang">&mdash;Français (FR)&mdash;</option>
+<option value="BDS">La Bible du Semeur (BDS)</option>
+<option value="LSG">Louis Segond (LSG)</option>
+<option value="NEG1979">Nouvelle Edition de Genève &ndash; NEG1979 (NEG1979)</option>
+<option value="SG21">Segond 21 (SG21)</option>
+<option value="SG21" class="spacer">&nbsp;</option>
+<option value="TR1550" class="lang">&mdash;Κοινη (GRC)&mdash;</option>
+<option value="TR1550">1550 Stephanus New Testament (TR1550)</option>
+<option value="WHNU">1881 Westcott-Hort New Testament (WHNU)</option>
+<option value="TR1894">1894 Scrivener New Testament (TR1894)</option>
+<option value="SBLGNT">SBL Greek New Testament (SBLGNT)</option>
+<option value="SBLGNT" class="spacer">&nbsp;</option>
+<option value="HHH" class="lang">&mdash;עברית (HE)&mdash;</option>
+<option value="HHH">Habrit Hakhadasha/Haderekh (HHH)</option>
+<option value="WLC">The Westminster Leningrad Codex (WLC)</option>
+<option value="WLC" class="spacer">&nbsp;</option>
+<option value="ERV-HI" class="lang">&mdash;हिन्दी (HI)&mdash;</option>
+<option value="ERV-HI">Hindi Bible: Easy-to-Read Version (ERV-HI)</option>
+<option value="ERV-HI" class="spacer">&nbsp;</option>
+<option value="HLGN" class="lang">&mdash;Ilonggo (HIL)&mdash;</option>
+<option value="HLGN">Ang Pulong Sang Dios (HLGN)</option>
+<option value="HLGN" class="spacer">&nbsp;</option>
+<option value="HNZ-RI" class="lang">&mdash;Hrvatski (HR)&mdash;</option>
+<option value="HNZ-RI">Hrvatski Novi Zavjet &ndash; Rijeka 2001 (HNZ-RI)</option>
+<option value="CRO">Knijga O Kristu (CRO)</option>
+<option value="CRO" class="spacer">&nbsp;</option>
+<option value="HCV" class="lang">&mdash;Kreyòl ayisyen (HT)&mdash;</option>
+<option value="HCV">Haitian Creole Version (HCV)</option>
+<option value="HCV" class="spacer">&nbsp;</option>
+<option value="KAR" class="lang">&mdash;Magyar (HU)&mdash;</option>
+<option value="KAR">Hungarian Károli (KAR)</option>
+<option value="ERV-HU">Hungarian Bible: Easy-to-Read Version (ERV-HU)</option>
+<option value="NT-HU">Hungarian New Translation (NT-HU)</option>
+<option value="NT-HU" class="spacer">&nbsp;</option>
+<option value="HWP" class="lang">&mdash;Hawai‘i Pidgin (HWC)&mdash;</option>
+<option value="HWP">Hawai‘i Pidgin (HWP)</option>
+<option value="HWP" class="spacer">&nbsp;</option>
+<option value="ICELAND" class="lang">&mdash;Íslenska (IS)&mdash;</option>
+<option value="ICELAND">Icelandic Bible (ICELAND)</option>
+<option value="ICELAND" class="spacer">&nbsp;</option>
+<option value="BDG" class="lang">&mdash;Italiano (IT)&mdash;</option>
+<option value="BDG">La Bibbia della Gioia (BDG)</option>
+<option value="CEI">Conferenza Episcopale Italiana (CEI)</option>
+<option value="LND">La Nuova Diodati (LND)</option>
+<option value="NR1994">Nuova Riveduta 1994 (NR1994)</option>
+<option value="NR2006">Nuova Riveduta 2006 (NR2006)</option>
+<option value="NR2006" class="spacer">&nbsp;</option>
+<option value="JAC" class="lang">&mdash;Jacalteco, Oriental (JAC)&mdash;</option>
+<option value="JAC">Jacalteco, Oriental (JAC)</option>
+<option value="JAC" class="spacer">&nbsp;</option>
+<option value="KEK" class="lang">&mdash;Kekchi (KEK)&mdash;</option>
+<option value="KEK">Kekchi (KEK)</option>
+<option value="KEK" class="spacer">&nbsp;</option>
+<option value="VULGATE" class="lang">&mdash;Latina (LA)&mdash;</option>
+<option value="VULGATE">Biblia Sacra Vulgata (VULGATE)</option>
+<option value="VULGATE" class="spacer">&nbsp;</option>
+<option value="MAORI" class="lang">&mdash;Māori (MI)&mdash;</option>
+<option value="MAORI">Maori Bible (MAORI)</option>
+<option value="MAORI" class="spacer">&nbsp;</option>
+<option value="MNT" class="lang">&mdash;Македонски (MK)&mdash;</option>
+<option value="MNT">Macedonian New Testament (MNT)</option>
+<option value="MNT" class="spacer">&nbsp;</option>
+<option value="ERV-MR" class="lang">&mdash;मराठी (MR)&mdash;</option>
+<option value="ERV-MR">Marathi Bible: Easy-to-Read Version (ERV-MR)</option>
+<option value="ERV-MR" class="spacer">&nbsp;</option>
+<option value="MVC" class="lang">&mdash;Mam, Central (MVC)&mdash;</option>
+<option value="MVC">Mam, Central (MVC)</option>
+<option value="MVC" class="spacer">&nbsp;</option>
+<option value="MVJ" class="lang">&mdash;Mam, Todos Santos (MVJ)&mdash;</option>
+<option value="MVJ">Mam de Todos Santos Chuchumatán (MVJ)</option>
+<option value="MVJ" class="spacer">&nbsp;</option>
+<option value="REIMER" class="lang">&mdash;Plautdietsch (NDS)&mdash;</option>
+<option value="REIMER">Reimer 2001 (REIMER)</option>
+<option value="REIMER" class="spacer">&nbsp;</option>
+<option value="ERV-NE" class="lang">&mdash;नेपाली (NE)&mdash;</option>
+<option value="ERV-NE">Nepali Bible: Easy-to-Read Version (ERV-NE)</option>
+<option value="ERV-NE" class="spacer">&nbsp;</option>
+<option value="NGU" class="lang">&mdash;Náhuatl de Guerrero (NGU)&mdash;</option>
+<option value="NGU">Náhuatl de Guerrero (NGU)</option>
+<option value="NGU" class="spacer">&nbsp;</option>
+<option value="HTB" class="lang">&mdash;Nederlands (NL)&mdash;</option>
+<option value="HTB">Het Boek (HTB)</option>
+<option value="HTB" class="spacer">&nbsp;</option>
+<option value="DNB1930" class="lang">&mdash;Norsk (NO)&mdash;</option>
+<option value="DNB1930">Det Norsk Bibelselskap 1930 (DNB1930)</option>
+<option value="LB">En Levende Bok (LB)</option>
+<option value="LB" class="spacer">&nbsp;</option>
+<option value="ERV-OR" class="lang">&mdash;ଓଡ଼ିଆ (OR)&mdash;</option>
+<option value="ERV-OR">Oriya Bible: Easy-to-Read Version (ERV-OR)</option>
+<option value="ERV-OR" class="spacer">&nbsp;</option>
+<option value="ERV-PA" class="lang">&mdash;ਪੰਜਾਬੀ (PA)&mdash;</option>
+<option value="ERV-PA">Punjabi Bible: Easy-to-Read Version (ERV-PA)</option>
+<option value="ERV-PA" class="spacer">&nbsp;</option>
+<option value="NP" class="lang">&mdash;Polski (PL)&mdash;</option>
+<option value="NP">Nowe Przymierze (NP)</option>
+<option value="SZ-PL">Słowo Życia (SZ-PL)</option>
+<option value="UBG">Updated Gdańsk Bible (UBG)</option>
+<option value="UBG" class="spacer">&nbsp;</option>
+<option value="NBTN" class="lang">&mdash;Nawat (PPL)&mdash;</option>
+<option value="NBTN">Ne Bibliaj Tik Nawat (NBTN)</option>
+<option value="NBTN" class="spacer">&nbsp;</option>
+<option value="ARC" class="lang">&mdash;Português (PT)&mdash;</option>
+<option value="ARC">Almeida Revista e Corrigida 2009 (ARC)</option>
+<option value="NTLH">Nova Traduҫão na Linguagem de Hoje 2000 (NTLH)</option>
+<option value="NVI-PT">Nova Versão Internacional (NVI-PT)</option>
+<option value="OL">O Livro (OL)</option>
+<option value="VFL">Portuguese New Testament: Easy-to-Read Version (VFL)</option>
+<option value="VFL" class="spacer">&nbsp;</option>
+<option value="MTDS" class="lang">&mdash;Quichua (QU)&mdash;</option>
+<option value="MTDS">Mushuj Testamento Diospaj Shimi (MTDS)</option>
+<option value="MTDS" class="spacer">&nbsp;</option>
+<option value="QUT" class="lang">&mdash;Quiché, Centro Occidenta (QUT)&mdash;</option>
+<option value="QUT">Quiché, Centro Occidental (QUT)</option>
+<option value="QUT" class="spacer">&nbsp;</option>
+<option value="RMNN" class="lang">&mdash;Română (RO)&mdash;</option>
+<option value="RMNN">Cornilescu 1924 - Revised 2010, 2014 (RMNN)</option>
+<option value="NTLR">Nouă Traducere În Limba Română (NTLR)</option>
+<option value="NTLR" class="spacer">&nbsp;</option>
+<option value="NRT" class="lang">&mdash;Русский (RU)&mdash;</option>
+<option value="NRT">New Russian Translation (NRT)</option>
+<option value="CARS">Священное Писание (Восточный Перевод) (CARS)</option>
+<option value="CARST">Священное Писание (Восточный перевод), версия для Таджикистана (CARST)</option>
+<option value="CARSA">Священное Писание (Восточный перевод), версия с «Аллахом» (CARSA)</option>
+<option value="ERV-RU">Russian New Testament: Easy-to-Read Version (ERV-RU)</option>
+<option value="RUSV">Russian Synodal Version (RUSV)</option>
+<option value="RUSV" class="spacer">&nbsp;</option>
+<option value="NPK" class="lang">&mdash;Slovenčina (SK)&mdash;</option>
+<option value="NPK">Nádej pre kazdého (NPK)</option>
+<option value="NPK" class="spacer">&nbsp;</option>
+<option value="SOM" class="lang">&mdash;Somali (SO)&mdash;</option>
+<option value="SOM">Somali Bible (SOM)</option>
+<option value="SOM" class="spacer">&nbsp;</option>
+<option value="ALB" class="lang">&mdash;Shqip (SQ)&mdash;</option>
+<option value="ALB">Albanian Bible (ALB)</option>
+<option value="ALB" class="spacer">&nbsp;</option>
+<option value="ERV-SR" class="lang">&mdash;Српски (SR)&mdash;</option>
+<option value="ERV-SR">Serbian New Testament: Easy-to-Read Version (ERV-SR)</option>
+<option value="ERV-SR" class="spacer">&nbsp;</option>
+<option value="SVL" class="lang">&mdash;Svenska (SV)&mdash;</option>
+<option value="SVL">Nya Levande Bibeln (SVL)</option>
+<option value="SV1917">Svenska 1917 (SV1917)</option>
+<option value="SFB">Svenska Folkbibeln (SFB)</option>
+<option value="SFB15">Svenska Folkbibeln 2015 (SFB15)</option>
+<option value="SFB15" class="spacer">&nbsp;</option>
+<option value="SNT" class="lang">&mdash;Kiswahili (SW)&mdash;</option>
+<option value="SNT">Neno: Bibilia Takatifu (SNT)</option>
+<option value="SNT" class="spacer">&nbsp;</option>
+<option value="ERV-TA" class="lang">&mdash;தமிழ் (TA)&mdash;</option>
+<option value="ERV-TA">Tamil Bible: Easy-to-Read Version (ERV-TA)</option>
+<option value="ERV-TA" class="spacer">&nbsp;</option>
+<option value="TNCV" class="lang">&mdash;ภาษาไทย (TH)&mdash;</option>
+<option value="TNCV">Thai New Contemporary Bible (TNCV)</option>
+<option value="ERV-TH">Thai New Testament: Easy-to-Read Version (ERV-TH)</option>
+<option value="ERV-TH" class="spacer">&nbsp;</option>
+<option value="FSV" class="lang">&mdash;Tagalog (TL)&mdash;</option>
+<option value="FSV">Ang Bagong Tipan: Filipino Standard Version (FSV)</option>
+<option value="ADB1905">Ang Dating Biblia (1905) (ADB1905)</option>
+<option value="SND">Ang Salita ng Diyos (SND)</option>
+<option value="MBBTAG">Magandang Balita Biblia (MBBTAG)</option>
+<option value="MBBTAG" class="spacer">&nbsp;</option>
+<option value="NA-TWI" class="lang">&mdash;Twi (TWI)&mdash;</option>
+<option value="NA-TWI">Nkwa Asem (NA-TWI)</option>
+<option value="NA-TWI" class="spacer">&nbsp;</option>
+<option value="UKR" class="lang">&mdash;Українська (UK)&mdash;</option>
+<option value="UKR">Ukrainian Bible (UKR)</option>
+<option value="ERV-UK">Ukrainian New Testament: Easy-to-Read Version (ERV-UK)</option>
+<option value="ERV-UK" class="spacer">&nbsp;</option>
+<option value="ERV-UR" class="lang">&mdash;اردو (UR)&mdash;</option>
+<option value="ERV-UR">Urdu Bible: Easy-to-Read Version (ERV-UR)</option>
+<option value="ERV-UR" class="spacer">&nbsp;</option>
+<option value="USP" class="lang">&mdash;Uspanteco (USP)&mdash;</option>
+<option value="USP">Uspanteco (USP)</option>
+<option value="USP" class="spacer">&nbsp;</option>
+<option value="VIET" class="lang">&mdash;Tiêng Viêt (VI)&mdash;</option>
+<option value="VIET">1934 Vietnamese Bible (VIET)</option>
+<option value="BD2011">Bản Dịch 2011 (BD2011)</option>
+<option value="NVB">New Vietnamese Bible (NVB)</option>
+<option value="BPT">Vietnamese Bible: Easy-to-Read Version (BPT)</option>
+<option value="BPT" class="spacer">&nbsp;</option>
+<option value="CCB" class="lang">&mdash;汉语 (ZH)&mdash;</option>
+<option value="CCB">Chinese Contemporary Bible (CCB)</option>
+<option value="ERV-ZH">Chinese New Testament: Easy-to-Read Version (ERV-ZH)</option>
+<option value="CNVS">Chinese New Version (Simplified) (CNVS)</option>
+<option value="CNVT">Chinese New Version (Traditional) (CNVT)</option>
+<option value="CSBS">Chinese Standard Bible (Simplified) (CSBS)</option>
+<option value="CSBT">Chinese Standard Bible (Traditional) (CSBT)</option>
+<option value="CUVS">Chinese Union Version (Simplified) (CUVS)</option>
+<option value="CUV">Chinese Union Version (Traditional) (CUV)</option>
+<option value="CUVMPS">Chinese Union Version Modern Punctuation (Simplified) (CUVMPS)</option>
+<option value="CUVMPT">Chinese Union Version Modern Punctuation (Traditional) (CUVMPT)</option>
+</select>
+</p>
+<input id="current" name="current" class="hidden" type="text" value="{{version}}">
+<p>
+<input type="submit" value="Use this Version">
+</p>
+
+</form>
+
+
+<script>
+$(function(){
+var version = document.getElementById('current').value;
+console.log(version);
+
+$("option").each(function(){
+  if($(this).val() != version)
+    $(this).removeAttr('selected');
+  else
+    $(this).attr("selected","selected");
+})
+})
+</script>
+<style>
+.hidden{
+display:none;
+}
+</style>
