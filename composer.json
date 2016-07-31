@@ -1,5 +1,5 @@
 {
-    "name": "JustinFuhrmeister-Clarke/BibleVerseoftheDaySymfony",
+    "name": "justin-fuhrmeister-clarke/bible-verse-of-the-day",
     "description": "A Symfony Component, to show the current Bible Verse of the day",
     "require": {
         "php": "^5.3.3 || ^7.0",
