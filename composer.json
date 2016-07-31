@@ -4,6 +4,6 @@
     "description": "A Symfony Component, to show the current Bible Verse of the day",
     "license": "GNU/GPL 2",
     "require": {
-	"symfony/symfony": "3.1.*",
+	"symfony/symfony": "3.1.*"
     }
 }
