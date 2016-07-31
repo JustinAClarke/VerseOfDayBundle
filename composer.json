@@ -2,7 +2,7 @@
     "name": "justin-fuhrmeister-clarke/bible-verse-of-the-day",
     "type": "symfony-bundle",
     "description": "A Symfony Component, to show the current Bible Verse of the day",
-    "license": "GNU/GPL 2",
+    "license": "GPL-2.0+",
     "require": {
 	"symfony/symfony": "3.1.*"
     }
