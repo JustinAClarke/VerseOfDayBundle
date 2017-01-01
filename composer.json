@@ -1,5 +1,5 @@
 {
-    "name": "justin-fuhrmeister-clarke/bible-verse-of-the-day",
+    "name": "justinfuhrmeister-clarke/verseofthedaybundle",
     "type": "symfony-bundle",
     "description": "A Symfony Component, to show the current Bible Verse of the day",
     "license": "GPL-2.0+",
